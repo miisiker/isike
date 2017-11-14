@@ -25,11 +25,11 @@ maxY = len(height[0])-1
 def heightDifferenceForward():
      if yon == 0 and y<maxY:
         return height[x][y+1] - height[x][y] 
-     elif yon == 1 and x<maxX:
+     if yon == 1 and x<maxX:
         return height[x+1][y] - height[x][y] 
-     elif yon == 2 and y>0:
+     if yon == 2 and y>0:
         return height[x][y-1] - height[x][y] 
-     elif yon == 3 and x>0:
+     if yon == 3 and x>0:
         return height[x-1][y] - height[x][y] 
      else:
         return 0
@@ -51,11 +51,11 @@ while  komut != "q":
         print ("I am moving forward.")
         if yon == 0 and y < maxY: 
                 y = y+ 1
-        elif yon == 1 and x < maxX:
+        if yon == 1 and x < maxX:
                 x = x + 1                  
-        elif yon == 2 and y > 0:                     
+        if yon == 2 and y > 0:                     
                 y = y - 1
-        elif yon == 3 and x > 0:
+        if yon == 3 and x > 0:
                 x = x - 1
 
     elif komut=="@":
